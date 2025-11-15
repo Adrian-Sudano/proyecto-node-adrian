@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Registro</title>
+
+  <!-- Bootstrap cargado desde node_modules (sin CDN) -->
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+
+  <style>
+    body {
+      background: #f5f5f5;
+      padding: 40px;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 600px;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2 class="mb-4 text-center">Formulario de Registro</h2>
+
+    <form action="https://www.w3schools.com/action_page.php" method="post" enctype="multipart/form-data">
+
+      <label class="form-label">Nombre</label>
+      <input type="text" name="nombre" class="form-control" required>
+
+      <label class="form-label mt-3">Apellido</label>
+      <input type="text" name="apellido" class="form-control" required>
+
+      <label class="form-label mt-3">Fecha de nacimiento</label>
+      <input type="date" name="fecha_nacimiento" class="form-control" required>
+
+      <label class="form-label mt-3">E-mail</label>
+      <input type="email" name="email" class="form-control" required>
+
+      <label class="form-label mt-3">Página web personal</label>
+      <input type="url" name="pagina_web" class="form-control">
+
+      <label class="form-label mt-3">Teléfono</label>
+      <input type="tel" name="telefono" pattern="[0-9]{10}" class="form-control" placeholder="Ej: 3493456301">
+
+      <label class="form-label mt-4">Preferencias de publicidad</label><br>
+      <input type="radio" name="publicidad" value="semanal"> Semanal<br>
+      <input type="radio" name="publicidad" value="mensual"> Mensual<br>
+      <input type="radio" name="publicidad" value="ninguno" checked> Ninguno<br>
+
+      <label class="form-label mt-3">Imagen de perfil (JPG o PNG)</label>
+      <input type="file" name="imagen" accept=".jpg,.jpeg,.png" class="form-control" required>
+
+      <label class="form-label mt-3">Color favorito</label>
+      <input type="color" name="color" class="form-control form-control-color">
+
+      <label class="form-label mt-3">Experiencia en software libre (0 a 100)</label>
+      <input type="range" name="experiencia" min="0" max="100" class="form-range">
+
+      <label class="form-label mt-3">Contraseña</label>
+      <input type="password" name="password" minlength="10" maxlength="60" class="form-control" required>
+
+      <div class="form-check mt-3">
+        <input class="form-check-input" type="checkbox" name="terminos" required>
+        <label class="form-check-label">Acepto los términos y condiciones</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-4">Enviar</button>
+      <button type="reset" class="btn btn-secondary mt-2">Resetear</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
